@@ -1,5 +1,188 @@
 # @primer/components
 
+## 36.0.0
+
+### Major Changes
+
+- [#3542](https://github.com/primer/react/pull/3542) [`8f7186af`](https://github.com/primer/react/commit/8f7186afcfa131c14add762cf49be7abc1b6cc0d) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - Remove components from deprecated
+
+  - `BorderBox`, `ChoiceFieldset`, `Flex`, `Grid`, `Position`, `Dropdown`, `FormGroup`, `SelectMenu`, `InputField`, `Label`
+
+  <!-- Changed components: _none_ -->
+
+- [#3260](https://github.com/primer/react/pull/3260) [`52c8d220`](https://github.com/primer/react/commit/52c8d220c68143d15b40f5c58a87b9ccb0307a71) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - Remove components from draft bundle
+
+  - Move UnderlineNav2 (draft) to the main bundle
+
+  ```diff
+  - import {UnderlineNav} from '@primer/react/drafts'
+  + import {UnderlineNav} from '@primer/react'
+  ```
+
+  ....
+
+  - Remove TreeView from drafts
+
+  ```diff
+  - import {TreeView} from '@primer/react/drafts'
+  + import {TreeView} from '@primer/react'
+  ```
+
+  - Remove SegmentedControl from drafts
+
+  ```diff
+  - import {SegmentedControl} from '@primer/react/drafts'
+  + import {SegmentedControl} from '@primer/react'
+  ```
+
+  - Remove NavList from drafts
+
+  ```diff
+  - import {NavList} from '@primer/react/drafts'
+  + import {NavList} from '@primer/react'
+  ```
+
+  - Remove SplitPageLayout from drafts
+
+  ```diff
+  - import {SplitPageLayout} from '@primer/react/drafts'
+  + import {SplitPageLayout} from '@primer/react'
+  ```
+
+  <!-- Changed components: UnderlineNav, TreeView, SegmentedControl, NavList, SplitPageLayout -->
+
+- [#2893](https://github.com/primer/react/pull/2893) [`98ea43fa`](https://github.com/primer/react/commit/98ea43fa01d78e11ba1088f149704c6c2da8a906) Thanks [@langermank](https://github.com/langermank)! - - Changes `leadingIcon` and `trailingIcon` to `leadingVisual` and `trailingVisual`
+
+  - Removes `Button.Counter` as a child component, replacing it with a `count` prop. This change allows us to use the `trailingVisual` slot for counters.
+  - Removes the `outline` button variant as we wish to only support `invisible` buttons.
+
+- [#3313](https://github.com/primer/react/pull/3313) [`77d4042f`](https://github.com/primer/react/commit/77d4042fc4b3ef701eb5d8610a77041d8e857a53) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - Remove deprecated `extralarge` variant from `Token` and `TextInputWithToken` component
+
+- [#3396](https://github.com/primer/react/pull/3396) [`318f9d6d`](https://github.com/primer/react/commit/318f9d6d0d94594658bbe82f70260e2959d8f9f9) Thanks [@mperrotti](https://github.com/mperrotti)! - Deprecates FilterList and FilteredSearch components
+
+- [#3399](https://github.com/primer/react/pull/3399) [`d5f394ea`](https://github.com/primer/react/commit/d5f394eab87cde6021278e44b0226b3fdfa9b172) Thanks [@mperrotti](https://github.com/mperrotti)! - Makes @types/styled-components an optional peer dependency, not a dependency
+
+- [#3240](https://github.com/primer/react/pull/3240) [`5d7d55b0`](https://github.com/primer/react/commit/5d7d55b09ca4bcd98361c89081e7fe16970c4029) Thanks [@joshblack](https://github.com/joshblack)! - Update minimum version for react and react-dom to v18
+
+- [#3544](https://github.com/primer/react/pull/3544) [`134f2658`](https://github.com/primer/react/commit/134f2658f0e73478d84b9caa942748dcef1b4192) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - Remove `DropdownButton` and `DropdownMenu` from deprecated and update the usages across
+
+  <!-- Changed components: SelectPanel, ActionList -->
+
+- [#3387](https://github.com/primer/react/pull/3387) [`a8dbf4a5`](https://github.com/primer/react/commit/a8dbf4a5e8a773ff36ffde582410a7acb143a764) Thanks [@mperrotti](https://github.com/mperrotti)! - The Autocomplete component no longer uses the deprecated ActionList component. There have been minor API updates, but it's largely the same.
+
+- [#3414](https://github.com/primer/react/pull/3414) [`eab4d15c`](https://github.com/primer/react/commit/eab4d15cf1e0048858ded9cb6f1ba67eb5231426) Thanks [@mperrotti](https://github.com/mperrotti)! - Removes 'warning' option from form components' `validationStatus` props
+
+- [#3319](https://github.com/primer/react/pull/3319) [`5d31e628`](https://github.com/primer/react/commit/5d31e6284b8877080aa9baf02ee9f1c2a92255b0) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - Remove support for `activeClassName` for Breadcrumb, SubNav, TabNav, UnderlineNav
+
+- [#3386](https://github.com/primer/react/pull/3386) [`7821267f`](https://github.com/primer/react/commit/7821267f3b3856ed753f68cbf29b0e5a25edaac0) Thanks [@radglob](https://github.com/radglob)! - Removes PageLayout.Pane position prop.
+
+### Minor Changes
+
+- [#3510](https://github.com/primer/react/pull/3510) [`bdbcfd15`](https://github.com/primer/react/commit/bdbcfd151d00a7995b07f57e2b37468af0bd0ee5) Thanks [@camertron](https://github.com/camertron)! - Implement accessibility audit feedback for ToggleSwitch
+
+  <!-- Changed components: ToggleSwitch -->
+
+- [#3466](https://github.com/primer/react/pull/3466) [`11b54ac8`](https://github.com/primer/react/commit/11b54ac88aff4bb8383a0e6a41174e4b477f85d7) Thanks [@mperrotti](https://github.com/mperrotti)! - Allows consumers to disable the behavior where the AvatarStack expands to show each Avatar on hover. There are also changes that allow users to customize the size of the avatars - even responsively!
+
+  <!-- Changed components: Avatar, AvatarStack -->
+
+- [#3538](https://github.com/primer/react/pull/3538) [`3ad237f8`](https://github.com/primer/react/commit/3ad237f8eb0af750dab40449074afb4297da0797) Thanks [@radglob](https://github.com/radglob)! - Remove deprecated ActionList from SelectPanel and FilteredActionList.
+
+  <!-- Changed components: SelectPanel -->
+
+- [#3390](https://github.com/primer/react/pull/3390) [`b4e15b84`](https://github.com/primer/react/commit/b4e15b8452772dc72d3efda73f5d96dbe2c35150) Thanks [@mperrotti](https://github.com/mperrotti)! - The showPages prop on both Pagination components can now accept a responsive value.
+
+  <!-- Changed components: DataTable, Pagination -->
+
+- [#3496](https://github.com/primer/react/pull/3496) [`11cdbdcc`](https://github.com/primer/react/commit/11cdbdcc3b7a662a93c46eafc92714fc3f1dc0c0) Thanks [@joshblack](https://github.com/joshblack)! - Update dependency ranges to use caret ranges instead of pinned versions
+
+  <!-- Changed components: _none_ -->
+
+### Patch Changes
+
+- [#3505](https://github.com/primer/react/pull/3505) [`c3f1e3c7`](https://github.com/primer/react/commit/c3f1e3c790b36034022ef548dfd300c3d89872a4) Thanks [@siddharthkp](https://github.com/siddharthkp)! - ActionList: Fix icon and description hover colors for danger variant
+
+  <!-- Changed components: ActionList -->
+
+- [#3520](https://github.com/primer/react/pull/3520) [`daee9a9c`](https://github.com/primer/react/commit/daee9a9ce3f21901e029c856d452ca47cfe35887) Thanks [@mattcosta7](https://github.com/mattcosta7)! - passthrough dom props on toggleswitch
+
+  <!-- Changed components: ToggleSwitch -->
+
+- [#3456](https://github.com/primer/react/pull/3456) [`6df7ae21`](https://github.com/primer/react/commit/6df7ae218f7320e71ab24b7937f2452259489491) Thanks [@mperrotti](https://github.com/mperrotti)! - Fixes type errors that appeared during v36 development. Likely caused by Button updates
+
+- [#3441](https://github.com/primer/react/pull/3441) [`90a145cc`](https://github.com/primer/react/commit/90a145ccd37338f50a47a8e16491a80e2d276b52) Thanks [@tomthorogood](https://github.com/tomthorogood)! - Renders docs.json markdown content
+
+  <!-- Changed components: _none_ -->
+
+- [#3540](https://github.com/primer/react/pull/3540) [`a90350cc`](https://github.com/primer/react/commit/a90350ccc4e2779cd5f21fc343d1fe793ebc5b56) Thanks [@kendallgassner](https://github.com/kendallgassner)! - Css styled block fixes
+
+  <!-- Changed components: DataTable, Timeline -->
+
+- [#3389](https://github.com/primer/react/pull/3389) [`57c4bdf9`](https://github.com/primer/react/commit/57c4bdf928c0c277dfcf896f67443a2e9779a1d7) Thanks [@radglob](https://github.com/radglob)! - Deprecates `position` prop for PageLayout.Pane and SplitPageLayout.Pane.
+
+  ```diff
+  -<PageLayout>
+  -    <PageLayout.Content />
+  -    <PageLayout.Pane position="start" />
+  -</PageLayout>
+
+  +<PageLayout>
+  +    <PageLayout.Pane />
+  +    <PageLayout.Content />
+  +</PageLayout>
+
+  ```
+
+  <!-- Changed components: PageLayout, SplitPageLayout -->
+
+- [#3490](https://github.com/primer/react/pull/3490) [`8d1d5146`](https://github.com/primer/react/commit/8d1d51469f981fc0717adc80637369dd207670ca) Thanks [@langermank](https://github.com/langermank)! - Bug fix: ActionList item label weight and spacing if description exists
+
+  <!-- Changed components: ActionList -->
+
+- [#3367](https://github.com/primer/react/pull/3367) [`3a701364`](https://github.com/primer/react/commit/3a701364aa77e24764a468de29602bc90142bbea) Thanks [@radglob](https://github.com/radglob)! - Use createRoot instead of ReactDOM.render for React 18 compatibility.
+
+- [#3361](https://github.com/primer/react/pull/3361) [`bea39c24`](https://github.com/primer/react/commit/bea39c24a7bc210cae78681572e7819edaec13db) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - UnderlineNav2: underline nav items' selected state can be managed by the app state
+
+  <!-- Changed components: UnderlineNav -->
+
+- [#3533](https://github.com/primer/react/pull/3533) [`33b60551`](https://github.com/primer/react/commit/33b60551af4749d476f970d5447f422a6ace33ca) Thanks [@amarmanhala](https://github.com/amarmanhala)! - Changed div tag to HTML semantic tag header for Header (file Header.tsx) component.
+
+  <!-- Changed components: _none_ -->
+
+- [#3516](https://github.com/primer/react/pull/3516) [`33d43459`](https://github.com/primer/react/commit/33d43459258c28fa5d69a1eca83d46cdb4bfe773) Thanks [@danielguillan](https://github.com/danielguillan)! - ActionList: Fixes the width of items for the full variant
+
+  <!-- Changed components: ActionList -->
+
+- [#3517](https://github.com/primer/react/pull/3517) [`cf9d8a5e`](https://github.com/primer/react/commit/cf9d8a5e0cb21583e3b6280e2d493e54fd2c1ca0) Thanks [@kendallgassner](https://github.com/kendallgassner)! - Adding aria-attributes and role to the ProgressBar component
+
+  <!-- Changed components: ProgressBar -->
+
+- [#3557](https://github.com/primer/react/pull/3557) [`b0fc071c`](https://github.com/primer/react/commit/b0fc071c8954c051987800baa51ead4134dd955a) Thanks [@radglob](https://github.com/radglob)! - Use IconButton instead of ButtonClose in v1 Dialog.
+
+  <!-- Changed components: Dialog -->
+
+- [#3539](https://github.com/primer/react/pull/3539) [`c02f3a2f`](https://github.com/primer/react/commit/c02f3a2f3cdf4cf009e4c4856588f4b34bf97785) Thanks [@mperrotti](https://github.com/mperrotti)! - Adds 'display' text size to PRC theme. This size is described in our [typography documentation](https://primer.style/design/foundations/typography#headings), but was never added to our React theme.
+
+  <!-- Changed components: _none_ -->
+
+- [#3537](https://github.com/primer/react/pull/3537) [`311c8c91`](https://github.com/primer/react/commit/311c8c918e33ca6692a7cb1eeb4c59ac27775ea1) Thanks [@kendallgassner](https://github.com/kendallgassner)! - Make checkmark visible on reduced-motion
+
+  <!-- Changed components: Checkbox -->
+
+- [#3491](https://github.com/primer/react/pull/3491) [`263d5978`](https://github.com/primer/react/commit/263d5978dfceda3c5c18da6cfcb9f72cc616fe2b) Thanks [@nicolleromero](https://github.com/nicolleromero)! - MarkdownViewer: Address scenario in useListInteraction where the position calculation can be incorrect when tasklists appear above legacy task lists
+
+  <!-- Changed components: MarkdownViewer -->
+
+- [#3447](https://github.com/primer/react/pull/3447) [`40808db7`](https://github.com/primer/react/commit/40808db7a603b8b39872317c36b56e655705d475) Thanks [@jesskuo4](https://github.com/jesskuo4)! - [Bug] Leading & Trailing Visual Colors for Button
+
+- [#3562](https://github.com/primer/react/pull/3562) [`53791841`](https://github.com/primer/react/commit/537918414b1f576368efd447962479b9f8afcb27) Thanks [@iansan5653](https://github.com/iansan5653)! - Fix `MarkdownEditor` file uploads inserting the URL into the wrong input when an overlay is open
+
+- [#3547](https://github.com/primer/react/pull/3547) [`7ef802e8`](https://github.com/primer/react/commit/7ef802e84833d08f0912e4ce91d5eedb3e3ca655) Thanks [@mperrotti](https://github.com/mperrotti)! - Prevents body scroll when Dialog (the newer Dialog) is open
+
+  <!-- Changed components: Dialog -->
+
+- [#3354](https://github.com/primer/react/pull/3354) [`d848aa51`](https://github.com/primer/react/commit/d848aa51d538ea8ba4f85e443f6c39a4c826a0b8) Thanks [@joshblack](https://github.com/joshblack)! - FilteredActionList now uses new ActionList as a base, and SelectPanel reflects those changes.
+
 ## 35.26.1
 
 ### Patch Changes
